@@ -1,4 +1,4 @@
-import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator } from "lucide-react";
+import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
 
 const services = [
@@ -75,22 +75,32 @@ const Index = () => {
 
       <section className="py-16 gradient-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-primary/40 backdrop-blur border border-gold/40 rounded-3xl p-8">
-            <div className="flex items-center gap-4">
-              <Calculator className="w-14 h-14 text-gold" />
+          <div className="max-w-3xl mx-auto bg-primary/40 backdrop-blur border border-gold/40 rounded-3xl p-8 space-y-6">
+            <div className="flex items-center justify-center gap-4">
+              <Calculator className="w-12 h-12 text-gold" />
               <div className="text-right">
                 <p className="text-lg opacity-90">للحجز والاستفسار</p>
-                <p className="text-2xl font-bold">تواصل الآن</p>
+                <p className="text-2xl font-bold">تواصل الآن مباشرة</p>
               </div>
             </div>
-            <a
-              href="tel:0590080739"
-              className="flex items-center gap-3 bg-gold text-gold-foreground px-8 py-4 rounded-full text-2xl md:text-3xl font-black tracking-wider shadow-gold hover:scale-105 transition-transform"
-              dir="ltr"
-            >
-              <Phone className="w-7 h-7" />
-              0590080739
-            </a>
+            <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
+              <a
+                href="tel:+966590080739"
+                className="flex items-center justify-center gap-3 bg-gold text-gold-foreground px-8 py-4 rounded-full text-xl md:text-2xl font-black shadow-gold hover:scale-105 transition-transform"
+              >
+                <Phone className="w-6 h-6" />
+                <span dir="ltr">اتصل: 0590080739</span>
+              </a>
+              <a
+                href="https://wa.me/966590080739"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-xl md:text-2xl font-black shadow-gold hover:scale-105 transition-transform"
+              >
+                <MessageCircle className="w-6 h-6" />
+                واتساب
+              </a>
+            </div>
           </div>
         </div>
       </section>
