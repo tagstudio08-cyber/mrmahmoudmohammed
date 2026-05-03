@@ -23,8 +23,11 @@ const services = [
 
 const Index = () => {
   const [studyType, setStudyType] = useState(studyTypes[0]);
+  const [studentName, setStudentName] = useState("");
+  const trimmedName = studentName.trim().slice(0, 60);
+  const namePart = trimmedName ? `\nاسمي: ${trimmedName}.` : "";
   const waMessage = encodeURIComponent(
-    `السلام عليكم أستاذ محمود،\nأرغب بالاستفسار عن دروس: ${studyType}.\nشكراً لك.`
+    `السلام عليكم أستاذ محمود،${namePart}\nأرغب بالاستفسار عن دروس: ${studyType}.\nشكراً لك.`
   );
   const waUrl = `https://wa.me/966590080739?text=${waMessage}`;
   return (
