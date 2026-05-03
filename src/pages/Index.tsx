@@ -23,8 +23,11 @@ const services = [
 
 const Index = () => {
   const [studyType, setStudyType] = useState(studyTypes[0]);
+  const [studentName, setStudentName] = useState("");
+  const trimmedName = studentName.trim().slice(0, 60);
+  const namePart = trimmedName ? `\nاسمي: ${trimmedName}.` : "";
   const waMessage = encodeURIComponent(
-    `السلام عليكم أستاذ محمود،\nأرغب بالاستفسار عن دروس: ${studyType}.\nشكراً لك.`
+    `السلام عليكم أستاذ محمود،${namePart}\nأرغب بالاستفسار عن دروس: ${studyType}.\nشكراً لك.`
   );
   const waUrl = `https://wa.me/966590080739?text=${waMessage}`;
   return (
@@ -101,7 +104,16 @@ const Index = () => {
               </div>
             </div>
             <div className="space-y-3 text-right">
-              <label className="block text-sm font-bold text-gold">اختر نوع الدراسة</label>
+              <label className="block text-sm font-bold text-gold">اسم الطالب</label>
+              <input
+                type="text"
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value)}
+                maxLength={60}
+                placeholder="اكتب اسم الطالب"
+                className="w-full bg-background text-foreground border-2 border-gold/60 rounded-xl px-4 py-3 text-lg font-medium focus:outline-none focus:border-gold"
+              />
+              <label className="block text-sm font-bold text-gold pt-2">اختر نوع الدراسة</label>
               <select
                 value={studyType}
                 onChange={(e) => setStudyType(e.target.value)}
