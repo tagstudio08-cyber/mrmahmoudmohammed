@@ -1,5 +1,17 @@
+import { useState } from "react";
 import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
+
+const studyTypes = [
+  "قدرات كمي",
+  "تحصيلي رياضيات",
+  "رياضيات - مرحلة ابتدائية",
+  "رياضيات - مرحلة متوسطة",
+  "رياضيات - مرحلة ثانوية",
+  "رياضيات - جامعة الإمام",
+  "رياضيات - جامعة الملك سعود",
+  "موهبة في الرياضيات",
+];
 
 const services = [
   { icon: TrendingUp, title: "تدريس قدرات كمي وتحصيلي رياضيات" },
@@ -10,6 +22,11 @@ const services = [
 ];
 
 const Index = () => {
+  const [studyType, setStudyType] = useState(studyTypes[0]);
+  const waMessage = encodeURIComponent(
+    `السلام عليكم أستاذ محمود،\nأرغب بالاستفسار عن دروس: ${studyType}.\nشكراً لك.`
+  );
+  const waUrl = `https://wa.me/966590080739?text=${waMessage}`;
   return (
     <div className="min-h-screen bg-background" dir="rtl">
       <header className="relative overflow-hidden gradient-primary text-primary-foreground">
@@ -83,6 +100,18 @@ const Index = () => {
                 <p className="text-2xl font-bold">تواصل الآن مباشرة</p>
               </div>
             </div>
+            <div className="space-y-3 text-right">
+              <label className="block text-sm font-bold text-gold">اختر نوع الدراسة</label>
+              <select
+                value={studyType}
+                onChange={(e) => setStudyType(e.target.value)}
+                className="w-full bg-background text-foreground border-2 border-gold/60 rounded-xl px-4 py-3 text-lg font-medium focus:outline-none focus:border-gold cursor-pointer"
+              >
+                {studyTypes.map((t) => (
+                  <option key={t} value={t}>{t}</option>
+                ))}
+              </select>
+            </div>
             <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
               <a
                 href="tel:+966590080739"
@@ -92,13 +121,13 @@ const Index = () => {
                 <span dir="ltr">اتصل: 0590080739</span>
               </a>
               <a
-                href="https://wa.me/966590080739"
+                href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-xl md:text-2xl font-black shadow-gold hover:scale-105 transition-transform"
               >
                 <MessageCircle className="w-6 h-6" />
-                واتساب
+                واتساب مع رسالة
               </a>
             </div>
           </div>
