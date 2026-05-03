@@ -1,5 +1,17 @@
+import { useState } from "react";
 import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
+
+const studyTypes = [
+  "قدرات كمي",
+  "تحصيلي رياضيات",
+  "رياضيات - مرحلة ابتدائية",
+  "رياضيات - مرحلة متوسطة",
+  "رياضيات - مرحلة ثانوية",
+  "رياضيات - جامعة الإمام",
+  "رياضيات - جامعة الملك سعود",
+  "موهبة في الرياضيات",
+];
 
 const services = [
   { icon: TrendingUp, title: "تدريس قدرات كمي وتحصيلي رياضيات" },
