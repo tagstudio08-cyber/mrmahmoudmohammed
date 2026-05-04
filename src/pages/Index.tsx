@@ -32,7 +32,7 @@ const Index = () => {
   const waMessage = encodeURIComponent(
     `السلام عليكم أستاذ محمود،${namePart}${cityPart}\nأرغب بالاستفسار عن دروس: ${studyType}.\nشكراً لك.`
   );
-  const waUrl = `https://wa.me/966590080739?text=${waMessage}`;
+  const waUrl = `https://wa.me/966568598439?text=${waMessage}`;
   return (
     <div className="min-h-screen bg-background" dir="rtl">
       <header className="relative overflow-hidden gradient-primary text-primary-foreground">
@@ -138,11 +138,11 @@ const Index = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
               <a
-                href="tel:+966590080739"
+                href="tel:+966568598439"
                 className="flex items-center justify-center gap-3 bg-gold text-gold-foreground px-8 py-4 rounded-full text-xl md:text-2xl font-black shadow-gold hover:scale-105 transition-transform"
               >
                 <Phone className="w-6 h-6" />
-                <span dir="ltr">اتصل: 0590080739</span>
+                <span dir="ltr">اتصل: 0568598439</span>
               </a>
               <a
                 href={waUrl}
