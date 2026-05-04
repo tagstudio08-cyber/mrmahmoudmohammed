@@ -58,10 +58,10 @@ const Index = () => {
             <p className="text-2xl md:text-3xl font-medium text-primary-foreground/90">الأستاذ</p>
             <h1 className="font-black leading-tight my-[26px]">
               <span className="block text-6xl md:text-8xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">محمود محمد دغمش</span>
-              <span className="block text-2xl md:text-3xl text-gold mt-3">معلم رياضيات شمال الرياض</span>
+              <span className="block text-2xl md:text-3xl text-gold mt-3">معلم رياضيات شمال الرياض - خبرة 22 عاماً</span>
             </h1>
-            <h2 className="text-3xl md:text-5xl font-bold border-b border-gold/60 pb-4 inline-block">مدرس قدرات وتحصيلي وجميع المراحل</h2>
-            <p className="text-2xl md:text-3xl font-bold pt-2">خدمات تدريس خصوصي في شمال الرياض</p>
+            <h2 className="text-2xl md:text-4xl font-bold border-b border-gold/60 pb-4 inline-block">معلم رياضيات شمال الرياض للقدرات والتحصيلي وجميع المراحل</h2>
+            <p className="text-xl md:text-2xl font-bold pt-2">دروس خصوصية في الرياضيات شمال الرياض - حضوري وأونلاين</p>
             <div className="inline-flex items-center gap-3 bg-gold text-gold-foreground px-6 py-3 rounded-full font-bold text-lg md:text-xl shadow-gold mt-4">
               <GraduationCap className="w-6 h-6" />
               خبرة 22 عام في التدريس
