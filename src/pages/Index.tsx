@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
+import { supabase } from "@/integrations/supabase/client";
 
 const studyTypes = [
   "قدرات كمي",
@@ -151,6 +152,15 @@ const Index = () => {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  if (trimmedName || trimmedCity) {
+                    supabase.from("inquiries").insert({
+                      student_name: trimmedName || "غير محدد",
+                      city: trimmedCity || "غير محدد",
+                      study_type: studyType,
+                    }).then(() => {});
+                  }
+                }}
                 className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-xl md:text-2xl font-black shadow-gold hover:scale-105 transition-transform"
               >
                 <MessageCircle className="w-6 h-6" />
