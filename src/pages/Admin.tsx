@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import * as XLSX from "xlsx";
 import { Download, RefreshCw, LogOut, Trash2, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Session } from "@supabase/supabase-js";
@@ -27,9 +26,8 @@ const Admin = () => {
   const [session, setSession] = useState<Session | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [mode, setMode] = useState<"login" | "signup">("login");
   const [busy, setBusy] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const [inquiries, setInquiries] = useState<Inquiry[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -75,19 +73,19 @@ const Admin = () => {
       return;
     }
     setBusy(true);
-    const fn = mode === "login" ? supabase.auth.signInWithPassword : supabase.auth.signUp;
-    const { error } = await fn({
+    const { error } = await supabase.auth.signInWithOtp({
       email: email.trim(),
-      password,
-      ...(mode === "signup"
-        ? { options: { emailRedirectTo: `${window.location.origin}/admin` } }
-        : {}),
-    } as any);
+      options: {
+        emailRedirectTo: `${window.location.origin}/admin`,
+        shouldCreateUser: true,
+      },
+    });
     setBusy(false);
     if (error) {
       toast({ title: error.message, variant: "destructive" });
-    } else if (mode === "signup") {
-      toast({ title: "تحقق من بريدك لتفعيل الحساب" });
+    } else {
+      setSent(true);
+      toast({ title: "تم إرسال رابط الدخول إلى بريدك" });
     }
   };
 
@@ -106,7 +104,8 @@ const Admin = () => {
     }
   };
 
-  const downloadExcel = () => {
+  const downloadExcel = async () => {
+    const XLSX = await import("xlsx");
     const wb = XLSX.utils.book_new();
     const allRows = inquiries.map((i, idx) => ({
       "#": idx + 1,
@@ -147,6 +146,9 @@ const Admin = () => {
           className="w-full max-w-md bg-card border border-border rounded-3xl p-8 shadow-elegant space-y-4"
         >
           <h1 className="text-3xl font-black text-primary text-center">دخول الأدمن</h1>
+          <p className="text-sm text-muted-foreground text-center">
+            أدخل بريدك وسيُرسل لك رابط دخول مباشر بدون كلمة مرور
+          </p>
           {session && !isAdmin && (
             <p className="text-sm text-destructive text-center">
               الحساب الحالي ليس أدمن.{" "}
@@ -163,29 +165,18 @@ const Admin = () => {
             className="w-full bg-background border-2 border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold"
             required
           />
-          <input
-            type="password"
-            placeholder="كلمة المرور"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            minLength={6}
-            className="w-full bg-background border-2 border-border rounded-xl px-4 py-3 focus:outline-none focus:border-gold"
-            required
-          />
           <button
             type="submit"
             disabled={busy}
             className="w-full bg-gold text-gold-foreground py-3 rounded-xl font-black shadow-gold disabled:opacity-50"
           >
-            {busy ? "..." : mode === "login" ? "دخول" : "إنشاء حساب"}
+            {busy ? "..." : "إرسال رابط الدخول"}
           </button>
-          <button
-            type="button"
-            onClick={() => setMode(mode === "login" ? "signup" : "login")}
-            className="w-full text-sm text-muted-foreground hover:text-primary"
-          >
-            {mode === "login" ? "إنشاء حساب أدمن جديد" : "لدي حساب بالفعل"}
-          </button>
+          {sent && (
+            <p className="text-sm text-center text-primary">
+              ✓ تم الإرسال — افتح بريدك واضغط على الرابط للدخول
+            </p>
+          )}
         </form>
       </div>
     );
