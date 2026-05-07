@@ -172,6 +172,8 @@ const Index = () => {
         </div>
       </section>
 
+      <ReviewsSection />
+
       <footer className="bg-primary text-primary-foreground/70 py-6 text-center text-sm">
         © {new Date().getFullYear()} الأستاذ محمود محمد دغمش - جميع الحقوق محفوظة
       </footer>
