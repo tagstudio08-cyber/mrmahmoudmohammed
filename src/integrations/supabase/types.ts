@@ -38,6 +38,30 @@ export type Database = {
         }
         Relationships: []
       }
+      reviews: {
+        Row: {
+          created_at: string
+          id: string
+          message: string
+          rating: number
+          student_name: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          message: string
+          rating?: number
+          student_name: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          message?: string
+          rating?: number
+          student_name?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

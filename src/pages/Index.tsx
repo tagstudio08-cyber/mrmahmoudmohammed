@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
+import ReviewsSection from "@/components/ReviewsSection";
 
 const studyTypes = [
   "قدرات كمي",
@@ -170,6 +171,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <ReviewsSection />
 
       <footer className="bg-primary text-primary-foreground/70 py-6 text-center text-sm">
         © {new Date().getFullYear()} الأستاذ محمود محمد دغمش - جميع الحقوق محفوظة
