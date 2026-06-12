@@ -105,7 +105,7 @@ All colors MUST be HSL.
   body {
     @apply text-foreground;
     font-family: 'Tajawal', sans-serif;
-    background: linear-gradient(-45deg, hsl(210 85% 92%), hsl(215 70% 78%), hsl(220 80% 35%), hsl(210 90% 88%));
+    background: linear-gradient(-45deg, hsl(210 100% 96%), hsl(215 90% 88%), hsl(220 85% 82%), hsl(205 100% 94%));
     background-size: 400% 400%;
     animation: animatedBlueBg 22s ease infinite;
   }

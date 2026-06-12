@@ -45,19 +45,8 @@ const Index = () => {
           <div className="absolute bottom-10 right-1/3">∫ √π</div>
         </div>
 
-        <div className="container relative mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-          <div className="order-2 md:order-1 flex justify-center">
-            <div className="relative">
-              <div className="absolute -inset-4 gradient-gold rounded-full blur-2xl opacity-30" />
-              <img
-                src={teacherImg}
-                alt="الأستاذ محمود محمد دغمش - مدرس رياضيات"
-                className="relative max-h-[520px] w-auto drop-shadow-2xl"
-              />
-            </div>
-          </div>
-
-          <div className="order-1 md:order-2 text-right space-y-4">
+        <div className="container relative mx-auto px-4 py-16 md:py-24">
+          <div className="text-right space-y-4 max-w-4xl mx-auto">
             <p className="text-2xl md:text-3xl font-medium text-primary-foreground/90">الأستاذ</p>
             <h1 className="font-black leading-tight my-[26px]">
               <span className="block text-6xl md:text-8xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">محمود محمد دغمش</span>
