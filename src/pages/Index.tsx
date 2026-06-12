@@ -3,6 +3,7 @@ import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap,
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
 import ReviewsSection from "@/components/ReviewsSection";
+import ScrollVideoSection from "@/components/ScrollVideoSection";
 
 const studyTypes = [
   "قدرات كمي",
@@ -36,7 +37,7 @@ const Index = () => {
   );
   const waUrl = `https://wa.me/966568598439?text=${waMessage}`;
   return (
-    <div className="min-h-screen bg-background" dir="rtl">
+    <div className="min-h-screen bg-transparent" dir="rtl">
       <header className="relative overflow-hidden gradient-primary text-primary-foreground">
         <div className="absolute inset-0 opacity-10 select-none pointer-events-none text-7xl font-bold leading-none">
           <div className="absolute top-10 right-10">ax²+bx+c=0</div>
@@ -71,6 +72,8 @@ const Index = () => {
           </div>
         </div>
       </header>
+
+      <ScrollVideoSection />
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
