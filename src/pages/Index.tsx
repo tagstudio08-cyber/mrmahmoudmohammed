@@ -37,7 +37,7 @@ const Index = () => {
   );
   const waUrl = `https://wa.me/966568598439?text=${waMessage}`;
   return (
-    <div className="min-h-screen bg-background" dir="rtl">
+    <div className="min-h-screen bg-transparent" dir="rtl">
       <header className="relative overflow-hidden gradient-primary text-primary-foreground">
         <div className="absolute inset-0 opacity-10 select-none pointer-events-none text-7xl font-bold leading-none">
           <div className="absolute top-10 right-10">ax²+bx+c=0</div>
