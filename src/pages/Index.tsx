@@ -3,6 +3,7 @@ import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap,
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
 import ReviewsSection from "@/components/ReviewsSection";
+import ScrollVideoSection from "@/components/ScrollVideoSection";
 
 const studyTypes = [
   "قدرات كمي",
