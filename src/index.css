@@ -103,9 +103,18 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(-45deg, hsl(210 85% 92%), hsl(215 70% 78%), hsl(220 80% 35%), hsl(210 90% 88%));
+    background-size: 400% 400%;
+    animation: animatedBlueBg 22s ease infinite;
   }
+}
+
+@keyframes animatedBlueBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @layer utilities {
