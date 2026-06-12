@@ -73,6 +73,8 @@ const Index = () => {
         </div>
       </header>
 
+      <ScrollVideoSection />
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center text-primary mb-4">الخدمات التعليمية</h2>
