@@ -81,10 +81,10 @@ const Index = () => {
             {services.map((s, i) => (
               <div
                 key={i}
-                className="group flex items-center gap-5 bg-card p-6 rounded-2xl border border-border hover:border-gold transition-all hover:shadow-elegant hover:-translate-y-1"
+                className="group flex flex-col items-center text-center gap-4 bg-card p-6 rounded-2xl border border-border hover:border-gold transition-all hover:shadow-elegant hover:-translate-y-1"
               >
                 <div className="shrink-0 w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform">
-                  <s.icon className="w-8 h-8 text-gold" />
+                  <s.icon className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-lg md:text-xl font-bold text-primary leading-relaxed">{s.title}</p>
               </div>
