@@ -103,10 +103,10 @@ const Index = () => {
 
       <section className="py-16 gradient-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-primary/40 backdrop-blur border border-gold/40 rounded-3xl p-8 space-y-6">
-            <div className="flex items-center justify-center gap-4">
-              <Calculator className="w-12 h-12 text-gold" />
-              <div className="text-right">
+          <div className="max-w-3xl mx-auto bg-primary/40 backdrop-blur border border-white/30 rounded-3xl p-8 space-y-6">
+            <div className="flex flex-col items-center justify-center gap-3 text-center">
+              <Calculator className="w-12 h-12 text-white" />
+              <div>
                 <p className="text-lg opacity-90">للحجز والاستفسار</p>
                 <p className="text-2xl font-bold">تواصل الآن مباشرة</p>
               </div>
