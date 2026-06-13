@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "asset_id": "6c2005e0-56c7-493d-a58d-234f07d7b84c",
+  "asset_id": "048659f8-64fb-4544-9c39-b845048ff304",
   "project_id": "728dfb66-58c8-456e-bd07-26eda22dfec4",
-  "url": "/__l5e/assets-v1/6c2005e0-56c7-493d-a58d-234f07d7b84c/teacher-nobg.webm",
-  "r2_key": "a/v1/728dfb66-58c8-456e-bd07-26eda22dfec4/6c2005e0-56c7-493d-a58d-234f07d7b84c/teacher-nobg.webm",
-  "original_filename": "teacher-nobg.webm",
-  "size": 500312,
+  "url": "/__l5e/assets-v1/048659f8-64fb-4544-9c39-b845048ff304/teacher-nobg-v2.webm",
+  "r2_key": "a/v1/728dfb66-58c8-456e-bd07-26eda22dfec4/048659f8-64fb-4544-9c39-b845048ff304/teacher-nobg-v2.webm",
+  "original_filename": "teacher-nobg-v2.webm",
+  "size": 505520,
   "content_type": "video/webm",
-  "created_at": "2026-06-13T06:02:54Z"
+  "created_at": "2026-06-13T06:05:32Z"
 }
