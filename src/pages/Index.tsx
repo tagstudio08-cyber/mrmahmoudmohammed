@@ -38,23 +38,31 @@ const Index = () => {
   const waUrl = `https://wa.me/966568598439?text=${waMessage}`;
   return (
     <div className="min-h-screen bg-transparent" dir="rtl">
-      <header className="relative overflow-hidden gradient-primary text-primary-foreground">
-        <div className="absolute inset-0 opacity-10 select-none pointer-events-none text-7xl font-bold leading-none">
+      <header className="relative overflow-hidden bg-gradient-to-br from-[hsl(220_85%_18%)] via-[hsl(215_80%_28%)] to-[hsl(205_85%_40%)] text-white">
+        <div className="absolute inset-0 opacity-[0.08] select-none pointer-events-none text-7xl font-bold leading-none">
           <div className="absolute top-10 right-10">ax²+bx+c=0</div>
           <div className="absolute top-1/2 left-10">f(x)</div>
           <div className="absolute bottom-10 right-1/3">∫ √π</div>
         </div>
 
-        <div className="container relative mx-auto px-4 py-16 md:py-24">
-          <div className="text-right space-y-4 max-w-4xl mx-auto">
-            <p className="text-2xl md:text-3xl font-medium text-primary-foreground/90">الأستاذ</p>
-            <h1 className="font-black leading-tight my-[26px]">
-              <span className="block text-6xl md:text-8xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">محمود محمد دغمش</span>
-              <span className="block text-2xl md:text-3xl text-gold mt-3">معلم رياضيات شمال الرياض - خبرة 22 عاماً</span>
+        <div className="container relative mx-auto px-4 py-20 md:py-28">
+          <div className="text-center space-y-5 max-w-4xl mx-auto flex flex-col items-center">
+            <p className="text-2xl md:text-3xl font-medium text-white/85">الأستاذ</p>
+            <h1 className="font-black leading-tight">
+              <span className="block text-5xl md:text-7xl lg:text-8xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+                محمود محمد دغمش
+              </span>
+              <span className="block text-xl md:text-2xl lg:text-3xl text-[hsl(195_100%_78%)] mt-4 font-bold">
+                معلم رياضيات شمال الرياض - خبرة 22 عاماً
+              </span>
             </h1>
-            <h2 className="text-2xl md:text-4xl font-bold border-b border-gold/60 pb-4 inline-block">معلم رياضيات شمال الرياض للقدرات والتحصيلي وجميع المراحل</h2>
-            <p className="text-xl md:text-2xl font-bold pt-2">دروس خصوصية في الرياضيات شمال الرياض - حضوري وأونلاين</p>
-            <div className="inline-flex items-center gap-3 bg-gold text-gold-foreground px-6 py-3 rounded-full font-bold text-lg md:text-xl shadow-gold mt-4">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold border-b-2 border-[hsl(195_100%_75%)]/70 pb-3 inline-block mx-auto">
+              للقدرات والتحصيلي وجميع المراحل
+            </h2>
+            <p className="text-lg md:text-xl font-semibold text-white/90 pt-2">
+              دروس خصوصية في الرياضيات - حضوري وأونلاين
+            </p>
+            <div className="inline-flex items-center gap-3 bg-white text-[hsl(220_80%_25%)] px-7 py-3 rounded-full font-black text-lg md:text-xl shadow-2xl mt-4">
               <GraduationCap className="w-6 h-6" />
               خبرة 22 عام في التدريس
             </div>
