@@ -66,8 +66,8 @@ const ScrollVideoSection = () => {
       style={{ height: "250vh" }}
       aria-label="فيديو المدرس"
     >
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center px-0 md:px-6">
-        <div className="relative w-full max-w-[1400px] h-[85vh] md:h-auto md:aspect-[21/9] rounded-none md:rounded-2xl overflow-hidden md:border md:border-white/20 bg-gradient-to-br from-sky-100/40 to-blue-200/30 md:shadow-2xl flex items-center justify-center">
+      <div className="sticky top-0 h-screen w-full flex items-center justify-center px-4 md:px-6">
+        <div className="relative w-full max-w-[1400px] aspect-[4/5] md:aspect-[21/9] max-h-[85vh] rounded-3xl md:rounded-2xl overflow-hidden border-2 border-white/40 md:border md:border-white/20 bg-gradient-to-br from-sky-100/60 to-blue-200/40 shadow-2xl ring-1 ring-primary/10 flex items-center justify-center p-2 md:p-0">
           <video
             ref={videoRef}
             src={teacherVideo.url}
@@ -75,7 +75,7 @@ const ScrollVideoSection = () => {
             playsInline
             preload="auto"
             disablePictureInPicture
-            className="h-full w-full md:w-auto object-contain"
+            className="h-full w-full object-contain rounded-2xl md:rounded-none"
             style={{ pointerEvents: "none" }}
           />
         </div>
