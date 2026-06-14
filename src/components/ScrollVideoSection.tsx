@@ -75,7 +75,7 @@ const ScrollVideoSection = () => {
             playsInline
             preload="auto"
             disablePictureInPicture
-            className="h-full w-full object-contain object-left-bottom rounded-2xl md:rounded-none"
+            className="h-full w-full object-contain object-bottom rounded-2xl md:rounded-none"
             style={{ pointerEvents: "none" }}
           />
         </div>
