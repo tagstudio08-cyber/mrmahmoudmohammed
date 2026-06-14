@@ -49,7 +49,7 @@ const Index = () => {
           <div className="text-center space-y-5 max-w-4xl mx-auto flex flex-col items-center">
             <p className="text-2xl md:text-3xl font-medium text-white/85">الأستاذ</p>
             <h1 className="font-black leading-tight">
-              <span className="block text-5xl md:text-7xl lg:text-8xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+              <span className="block text-5xl md:text-7xl lg:text-8xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]" style={{ fontFamily: "'Cairo', sans-serif" }}>
                 محمود محمد دغمش
               </span>
               <span className="block text-xl md:text-2xl lg:text-3xl text-[hsl(195_100%_78%)] mt-4 font-bold">
