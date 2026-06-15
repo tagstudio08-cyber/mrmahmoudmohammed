@@ -154,6 +154,7 @@ const Admin = () => {
   if (!isAdmin) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4" dir="rtl">
+        <AdminHead />
         <form
           onSubmit={handleAuth}
           className="w-full max-w-md bg-card border border-border rounded-3xl p-8 shadow-elegant space-y-4"
