@@ -152,8 +152,9 @@ const Index = () => {
               </div>
             </div>
             <div className="space-y-3 text-right">
-              <label className="block text-sm font-bold text-gold">اسم الطالب</label>
+              <label htmlFor="student-name" className="block text-sm font-bold text-gold">اسم الطالب</label>
               <input
+                id="student-name"
                 type="text"
                 value={studentName}
                 onChange={(e) => setStudentName(e.target.value)}
@@ -161,8 +162,9 @@ const Index = () => {
                 placeholder="اكتب اسم الطالب"
                 className="w-full bg-background text-foreground border-2 border-gold/60 rounded-xl px-4 py-3 text-lg font-medium focus:outline-none focus:border-gold"
               />
-              <label className="block text-sm font-bold text-gold pt-2">المدينة</label>
+              <label htmlFor="student-city" className="block text-sm font-bold text-gold pt-2">المدينة</label>
               <input
+                id="student-city"
                 type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
@@ -170,8 +172,9 @@ const Index = () => {
                 placeholder="اكتب اسم المدينة"
                 className="w-full bg-background text-foreground border-2 border-gold/60 rounded-xl px-4 py-3 text-lg font-medium focus:outline-none focus:border-gold"
               />
-              <label className="block text-sm font-bold text-gold pt-2">اختر نوع الدراسة</label>
+              <label htmlFor="study-type" className="block text-sm font-bold text-gold pt-2">اختر نوع الدراسة</label>
               <select
+                id="study-type"
                 value={studyType}
                 onChange={(e) => setStudyType(e.target.value)}
                 className="w-full bg-background text-foreground border-2 border-gold/60 rounded-xl px-4 py-3 text-lg font-medium focus:outline-none focus:border-gold cursor-pointer"
