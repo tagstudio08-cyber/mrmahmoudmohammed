@@ -24,6 +24,15 @@ const services = [
   { icon: Star, title: "تدريس موهبة" },
 ];
 
+const mathSubjects = [
+  { icon: Calculator, title: "حساب التكامل" },
+  { icon: BookOpen, title: "أسس الرياضيات" },
+  { icon: TrendingUp, title: "حساب التفاضل والتكامل" },
+  { icon: BarChart3, title: "حساب المتجهات" },
+  { icon: Grid3X3, title: "الجبر الخطي" },
+  { icon: Layers, title: "التحليل العددي (1)" },
+];
+
 const Index = () => {
   const [studyType, setStudyType] = useState(studyTypes[0]);
   const [studentName, setStudentName] = useState("");
