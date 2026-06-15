@@ -171,7 +171,9 @@ const Admin = () => {
               </button>
             </p>
           )}
+          <label htmlFor="admin-email" className="sr-only">البريد الإلكتروني</label>
           <input
+            id="admin-email"
             type="email"
             placeholder="البريد الإلكتروني"
             value={email}
