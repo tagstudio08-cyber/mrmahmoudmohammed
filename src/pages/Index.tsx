@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle } from "lucide-react";
+import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle, FunctionSquare, Sigma, Grid3X3, BarChart3, Layers } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
 import ReviewsSection from "@/components/ReviewsSection";
