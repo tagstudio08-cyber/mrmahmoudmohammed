@@ -1,8 +1,21 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Download, RefreshCw, LogOut, Trash2, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Session } from "@supabase/supabase-js";
 import { toast } from "@/hooks/use-toast";
+
+const AdminHead = () => (
+  <Helmet>
+    <title>لوحة التحكم - الأدمن</title>
+    <meta name="description" content="لوحة تحكم الأدمن لإدارة الاستفسارات والآراء." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://mrmahmoudmohammed.lovable.app/admin" />
+    <meta property="og:title" content="لوحة التحكم - الأدمن" />
+    <meta property="og:description" content="لوحة تحكم الأدمن." />
+    <meta property="og:url" content="https://mrmahmoudmohammed.lovable.app/admin" />
+  </Helmet>
+);
 
 const ADMIN_EMAIL = "doghmishtaha@gmail.com";
 
