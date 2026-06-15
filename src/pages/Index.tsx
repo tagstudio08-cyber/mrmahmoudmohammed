@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle } from "lucide-react";
+import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle, BarChart3, Layers, Grid3X3 } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -22,6 +22,15 @@ const services = [
   { icon: Building2, title: "مدرس رياضيات جامعات الإمام والملك سعود" },
   { icon: Lightbulb, title: "تدريس موهبة في الرياضيات" },
   { icon: Star, title: "تدريس موهبة" },
+];
+
+const mathSubjects = [
+  { icon: Calculator, title: "حساب التكامل" },
+  { icon: BookOpen, title: "أسس الرياضيات" },
+  { icon: TrendingUp, title: "حساب التفاضل والتكامل" },
+  { icon: BarChart3, title: "حساب المتجهات" },
+  { icon: Grid3X3, title: "الجبر الخطي" },
+  { icon: Layers, title: "التحليل العددي (1)" },
 ];
 
 const Index = () => {
@@ -97,6 +106,27 @@ const Index = () => {
             <p className="text-2xl md:text-3xl font-bold text-center leading-relaxed">
               تعلم <span className="text-gold">الرياضيات</span> بأسلوب مبسط واحترافية عالية
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-center text-primary mb-4">مواد رياضيات</h2>
+          <div className="w-24 h-1 bg-gold mx-auto mb-14 rounded-full" />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {mathSubjects.map((s, i) => (
+              <div
+                key={i}
+                className="group flex flex-col items-center text-center gap-4 bg-card p-6 rounded-2xl border border-border hover:border-gold transition-all hover:shadow-elegant hover:-translate-y-1"
+              >
+                <div className="shrink-0 w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform">
+                  <s.icon className="w-8 h-8 text-white" />
+                </div>
+                <p className="text-lg md:text-xl font-bold text-primary leading-relaxed">{s.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
