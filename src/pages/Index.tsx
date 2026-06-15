@@ -48,6 +48,14 @@ const Index = () => {
   const waUrl = `https://wa.me/966568598439?text=${waMessage}`;
   return (
     <div className="min-h-screen bg-transparent" dir="rtl">
+      <Helmet>
+        <title>محمود دغمش - معلم رياضيات شمال الرياض</title>
+        <meta name="description" content="الأستاذ محمود دغمش - معلم رياضيات شمال الرياض، خبرة 22 عاماً في القدرات والتحصيلي وجميع المراحل وجامعتي الإمام والملك سعود." />
+        <link rel="canonical" href="https://mrmahmoudmohammed.lovable.app/" />
+        <meta property="og:title" content="معلم رياضيات شمال الرياض - الأستاذ محمود دغمش" />
+        <meta property="og:description" content="معلم رياضيات شمال الرياض بخبرة 22 عاماً. قدرات، تحصيلي، جميع المراحل وجامعات الإمام والملك سعود." />
+        <meta property="og:url" content="https://mrmahmoudmohammed.lovable.app/" />
+      </Helmet>
       <header className="relative overflow-hidden bg-gradient-to-br from-[hsl(220_85%_18%)] via-[hsl(215_80%_28%)] to-[hsl(205_85%_40%)] text-white">
         <div className="absolute inset-0 opacity-[0.08] select-none pointer-events-none text-7xl font-bold leading-none">
           <div className="absolute top-10 right-10">ax²+bx+c=0</div>
