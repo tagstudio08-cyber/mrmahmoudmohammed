@@ -198,6 +198,7 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen bg-background p-6" dir="rtl">
+      <AdminHead />
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <h1 className="text-3xl font-black text-primary">لوحة التحكم</h1>
