@@ -1,8 +1,21 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Download, RefreshCw, LogOut, Trash2, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Session } from "@supabase/supabase-js";
 import { toast } from "@/hooks/use-toast";
+
+const AdminHead = () => (
+  <Helmet>
+    <title>لوحة التحكم - الأدمن</title>
+    <meta name="description" content="لوحة تحكم الأدمن لإدارة الاستفسارات والآراء." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://mrmahmoudmohammed.lovable.app/admin" />
+    <meta property="og:title" content="لوحة التحكم - الأدمن" />
+    <meta property="og:description" content="لوحة تحكم الأدمن." />
+    <meta property="og:url" content="https://mrmahmoudmohammed.lovable.app/admin" />
+  </Helmet>
+);
 
 const ADMIN_EMAIL = "doghmishtaha@gmail.com";
 
@@ -141,6 +154,7 @@ const Admin = () => {
   if (!isAdmin) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4" dir="rtl">
+        <AdminHead />
         <form
           onSubmit={handleAuth}
           className="w-full max-w-md bg-card border border-border rounded-3xl p-8 shadow-elegant space-y-4"
@@ -157,7 +171,9 @@ const Admin = () => {
               </button>
             </p>
           )}
+          <label htmlFor="admin-email" className="sr-only">البريد الإلكتروني</label>
           <input
+            id="admin-email"
             type="email"
             placeholder="البريد الإلكتروني"
             value={email}
@@ -184,6 +200,7 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen bg-background p-6" dir="rtl">
+      <AdminHead />
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <h1 className="text-3xl font-black text-primary">لوحة التحكم</h1>

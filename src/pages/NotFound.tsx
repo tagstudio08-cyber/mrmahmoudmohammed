@@ -1,5 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Home, AlertTriangle, Phone } from "lucide-react";
 
 const NotFound = () => {
@@ -14,6 +15,15 @@ const NotFound = () => {
       className="flex min-h-screen items-center justify-center gradient-primary text-primary-foreground p-6"
       dir="rtl"
     >
+      <Helmet>
+        <title>الصفحة غير موجودة - 404</title>
+        <meta name="description" content="عذراً، الصفحة التي تبحث عنها غير موجودة." />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href={`https://mrmahmoudmohammed.lovable.app${location.pathname}`} />
+        <meta property="og:title" content="الصفحة غير موجودة - 404" />
+        <meta property="og:description" content="الصفحة التي تبحث عنها غير موجودة." />
+        <meta property="og:url" content={`https://mrmahmoudmohammed.lovable.app${location.pathname}`} />
+      </Helmet>
       <div className="max-w-xl w-full bg-primary/40 backdrop-blur border border-gold/40 rounded-3xl p-10 text-center shadow-elegant">
         <div className="flex justify-center mb-6">
           <div className="w-20 h-20 rounded-full bg-gold/20 flex items-center justify-center">
