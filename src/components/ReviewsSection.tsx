@@ -116,8 +116,9 @@ const ReviewsSection = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-bold mb-2">الاسم</label>
+            <label htmlFor="review-name" className="block text-sm font-bold mb-2">الاسم</label>
             <input
+              id="review-name"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -128,8 +129,8 @@ const ReviewsSection = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-bold mb-2">التقييم</label>
-            <div className="flex gap-1">
+            <span id="rating-label" className="block text-sm font-bold mb-2">التقييم</span>
+            <div className="flex gap-1" role="radiogroup" aria-labelledby="rating-label">
               {Array.from({ length: 5 }).map((_, i) => {
                 const v = i + 1;
                 return (
@@ -138,6 +139,8 @@ const ReviewsSection = () => {
                     type="button"
                     onClick={() => setRating(v)}
                     className="p-1"
+                    aria-label={`${v} ${v === 1 ? "نجمة" : "نجوم"}`}
+                    aria-pressed={v === rating}
                   >
                     <Star
                       className={`w-8 h-8 transition-colors ${
@@ -151,8 +154,9 @@ const ReviewsSection = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-bold mb-2">رسالتك</label>
+            <label htmlFor="review-message" className="block text-sm font-bold mb-2">رسالتك</label>
             <textarea
+              id="review-message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               maxLength={500}
