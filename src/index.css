@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Thmanyah Serif';
+  src: url('/__l5e/assets-v1/e286b61d-0539-467d-847c-c316a20ab59c/thmanyahseriftext-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Thmanyah Serif';
+  src: url('/__l5e/assets-v1/dc34ae23-1714-4fd3-b939-702b79426997/thmanyahseriftext-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
