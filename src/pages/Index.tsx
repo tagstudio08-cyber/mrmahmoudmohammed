@@ -61,7 +61,7 @@ const Index = () => {
               <span className="block text-5xl md:text-7xl lg:text-8xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]" style={{ fontFamily: "'Thmanyah Serif', serif", fontWeight: 900 }}>
                 محمود محمد دغمش
               </span>
-              <span className="block text-xl md:text-2xl lg:text-3xl text-[hsl(195_100%_78%)] mt-4 font-bold">
+              <span className="block text-xl md:text-2xl lg:text-3xl text-[hsl(195_100%_78%)] mt-4" style={{ fontFamily: "'Thmanyah Serif', serif", fontWeight: 700 }}>
                 معلم رياضيات شمال الرياض - خبرة 22 عاماً
               </span>
             </h1>
