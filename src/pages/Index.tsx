@@ -88,6 +88,7 @@ const Index = () => {
         </div>
       </header>
 
+      <main>
       <ScrollVideoSection />
 
       <section className="py-20 bg-background">
