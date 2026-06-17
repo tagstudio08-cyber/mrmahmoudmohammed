@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+#lovable-badge,
+[id*="lovable-badge"],
+[class*="lovable-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 @font-face {
   font-family: 'Thmanyah Serif';
   src: url('/__l5e/assets-v1/e286b61d-0539-467d-847c-c316a20ab59c/thmanyahseriftext-Bold.otf') format('opentype');
