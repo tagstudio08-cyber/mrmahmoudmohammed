@@ -19,7 +19,7 @@ const ScrollVideoSection = () => {
     let rafId = 0;
 
     const tick = () => {
-      currentTime += (targetTime - currentTime) * 0.08;
+      currentTime += (targetTime - currentTime) * 0.18;
       if (Math.abs(targetTime - currentTime) > 0.0005) {
         if (video.readyState >= 2) {
           try {
