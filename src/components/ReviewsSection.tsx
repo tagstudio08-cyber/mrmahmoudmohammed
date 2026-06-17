@@ -82,7 +82,7 @@ const ReviewsSection = () => {
                       <Star
                         key={i}
                         className={`w-5 h-5 ${
-                          i < r.rating ? "fill-gold text-gold" : "text-muted-foreground/30"
+                          i < r.rating ? "fill-amber-400 text-amber-400" : "text-muted-foreground/30"
                         }`}
                       />
                     ))}
@@ -144,7 +144,7 @@ const ReviewsSection = () => {
                   >
                     <Star
                       className={`w-8 h-8 transition-colors ${
-                        v <= rating ? "fill-gold text-gold" : "text-muted-foreground/40"
+                        v <= rating ? "fill-amber-400 text-amber-400" : "text-muted-foreground/40"
                       }`}
                     />
                   </button>
