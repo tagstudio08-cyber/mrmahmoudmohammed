@@ -6,6 +6,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Admin from "./pages/Admin.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Qudurat from "./pages/Qudurat.tsx";
+import Tahsili from "./pages/Tahsili.tsx";
+import ImamUniversity from "./pages/ImamUniversity.tsx";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +20,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/qudurat" element={<Qudurat />} />
+          <Route path="/tahsili" element={<Tahsili />} />
+          <Route path="/imam-university-math" element={<ImamUniversity />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
