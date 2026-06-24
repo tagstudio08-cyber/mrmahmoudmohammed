@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle, BarChart3, Layers, Grid3X3 } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
@@ -108,6 +109,18 @@ const Index = () => {
                 <p className="text-lg md:text-xl font-bold text-primary leading-relaxed">{s.title}</p>
               </div>
             ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-12 grid sm:grid-cols-3 gap-4">
+            <Link to="/qudurat" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة القدرات الكمي ←
+            </Link>
+            <Link to="/tahsili" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة التحصيلي رياضيات ←
+            </Link>
+            <Link to="/imam-university-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة جامعة الإمام ←
+            </Link>
           </div>
 
           <div className="max-w-3xl mx-auto mt-16 relative bg-primary text-primary-foreground rounded-3xl p-10 shadow-elegant">
