@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle, GraduationCap, CheckCircle2, Home } from "lucide-react";
+import QuickBookingForm from "./QuickBookingForm";
 
 export interface ServicePageProps {
   slug: string;
