@@ -18,6 +18,7 @@ export interface ServicePageProps {
   waText: string;
   jsonLdName: string;
   jsonLdDescription: string;
+  defaultStudyType: string;
 }
 
 const ServicePageLayout = (p: ServicePageProps) => {
