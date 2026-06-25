@@ -124,6 +124,10 @@ const ServicePageLayout = (p: ServicePageProps) => {
           </div>
         </section>
 
+        <section className="mt-12">
+          <QuickBookingForm defaultStudyType={p.defaultStudyType} title={`احجز حصة ${p.title}`} />
+        </section>
+
         <nav className="mt-10 text-center">
           <Link to="/" className="text-primary font-bold hover:text-gold underline">← العودة للصفحة الرئيسية</Link>
         </nav>
