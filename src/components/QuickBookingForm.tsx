@@ -8,7 +8,7 @@ const schema = z.object({
   student_name: z.string().trim().min(2, "الاسم قصير جداً").max(60, "الاسم طويل جداً"),
   city: z.string().trim().min(2, "المدينة مطلوبة").max(60, "اسم المدينة طويل"),
   study_type: z.string().trim().min(2).max(80),
-});
+}) satisfies z.ZodType<{ student_name: string; city: string; study_type: string }>;
 
 interface Props {
   defaultStudyType: string;
