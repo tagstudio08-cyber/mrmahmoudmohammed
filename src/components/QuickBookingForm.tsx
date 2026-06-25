@@ -30,7 +30,8 @@ const QuickBookingForm = ({ defaultStudyType, title = "احجز حصتك الآ�
       return;
     }
     setLoading(true);
-    const { error } = await supabase.from("inquiries").insert(parsed.data);
+    const payload = parsed.data as { student_name: string; city: string; study_type: string };
+    const { error } = await supabase.from("inquiries").insert(payload);
     setLoading(false);
     if (error) {
       toast({ title: "تعذّر الإرسال", description: "حاول مرة أخرى من فضلك", variant: "destructive" });
