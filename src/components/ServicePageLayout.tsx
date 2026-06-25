@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle, GraduationCap, CheckCircle2, Home } from "lucide-react";
+import QuickBookingForm from "./QuickBookingForm";
 
 export interface ServicePageProps {
   slug: string;
@@ -17,6 +18,7 @@ export interface ServicePageProps {
   waText: string;
   jsonLdName: string;
   jsonLdDescription: string;
+  defaultStudyType: string;
 }
 
 const ServicePageLayout = (p: ServicePageProps) => {
@@ -120,6 +122,10 @@ const ServicePageLayout = (p: ServicePageProps) => {
               واتساب
             </a>
           </div>
+        </section>
+
+        <section className="mt-12">
+          <QuickBookingForm defaultStudyType={p.defaultStudyType} title={`احجز حصة ${p.title}`} />
         </section>
 
         <nav className="mt-10 text-center">
