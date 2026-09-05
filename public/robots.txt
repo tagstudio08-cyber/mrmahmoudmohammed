@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://mrmahmoudmohammed.lovable.app/sitemap.xml
+Sitemap: https://mahmoudm.com/sitemap.xml
