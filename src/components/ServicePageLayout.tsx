@@ -22,7 +22,7 @@ export interface ServicePageProps {
 }
 
 const ServicePageLayout = (p: ServicePageProps) => {
-  const url = `https://mrmahmoudmohammed.lovable.app/${p.slug}`;
+  const url = `https://mahmoudm.com/${p.slug}`;
   const waUrl = `https://wa.me/966568598439?text=${encodeURIComponent(p.waText)}`;
 
   return (
@@ -55,7 +55,7 @@ const ServicePageLayout = (p: ServicePageProps) => {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://mrmahmoudmohammed.lovable.app/" },
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://mahmoudm.com/" },
             { "@type": "ListItem", "position": 2, "name": p.title, "item": url }
           ]
         })}</script>
