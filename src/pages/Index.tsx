@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle, BarChart3, Layers, Grid3X3 } from "lucide-react";
+import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap, Quote, Calculator, MessageCircle, BarChart3, Layers, Grid3X3, ClipboardCheck } from "lucide-react";
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -23,6 +23,7 @@ const services = [
   { icon: BookOpen, title: "مدرس رياضيات جميع المراحل" },
   { icon: Building2, title: "مدرس رياضيات جامعات الإمام والملك سعود" },
   { icon: Lightbulb, title: "تدريس موهبة في الرياضيات" },
+  { icon: ClipboardCheck, title: "متابعة الصفوف والدروس والواجبات شمال الرياض" },
   { icon: Star, title: "تدريس موهبة" },
 ];
 
