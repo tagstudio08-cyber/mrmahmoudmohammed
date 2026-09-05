@@ -53,10 +53,10 @@ const Index = () => {
       <Helmet>
         <title>محمود دغمش - معلم رياضيات شمال الرياض</title>
         <meta name="description" content="الأستاذ محمود دغمش - معلم رياضيات شمال الرياض، خبرة 22 عاماً في القدرات والتحصيلي وجميع المراحل وجامعتي الإمام والملك سعود." />
-        <link rel="canonical" href="https://mrmahmoudmohammed.lovable.app/" />
+        <link rel="canonical" href="https://mahmoudm.com/" />
         <meta property="og:title" content="معلم رياضيات شمال الرياض - الأستاذ محمود دغمش" />
         <meta property="og:description" content="معلم رياضيات شمال الرياض بخبرة 22 عاماً. قدرات، تحصيلي، جميع المراحل وجامعات الإمام والملك سعود." />
-        <meta property="og:url" content="https://mrmahmoudmohammed.lovable.app/" />
+        <meta property="og:url" content="https://mahmoudm.com/" />
       </Helmet>
       <header className="relative overflow-hidden bg-gradient-to-br from-[hsl(220_85%_18%)] via-[hsl(215_80%_28%)] to-[hsl(205_85%_40%)] text-white">
         <div className="absolute inset-0 opacity-[0.08] select-none pointer-events-none text-7xl font-bold leading-none">
@@ -121,6 +121,9 @@ const Index = () => {
             </Link>
             <Link to="/imam-university-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
               صفحة جامعة الإمام ←
+            </Link>
+            <Link to="/follow-up" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all sm:col-span-3">
+              صفحة متابعة الدروس والواجبات ←
             </Link>
           </div>
 
