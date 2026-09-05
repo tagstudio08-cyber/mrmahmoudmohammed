@@ -93,6 +93,10 @@ const ChartTooltipContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
     React.ComponentProps<"div"> & {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      payload?: any[];
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      label?: any;
       hideLabel?: boolean;
       hideIndicator?: boolean;
       indicator?: "line" | "dot" | "dashed";
