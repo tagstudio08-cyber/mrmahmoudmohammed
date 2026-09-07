@@ -112,6 +112,57 @@ const ServicePageLayout = (p: ServicePageProps) => {
           </div>
         </section>
 
+        {p.longSections?.map((s, i) => (
+          <section className="mt-12" key={i}>
+            <h2 className="text-3xl font-black text-primary mb-6">{s.h2}</h2>
+            <div className="space-y-4 text-lg leading-relaxed text-foreground">
+              {s.paragraphs?.map((par, j) => (
+                <p key={j}>{par}</p>
+              ))}
+            </div>
+            {s.bullets && (
+              <ul className="mt-5 space-y-3">
+                {s.bullets.map((b, j) => (
+                  <li key={j} className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
+                    <CheckCircle2 className="w-5 h-5 text-gold shrink-0 mt-1.5" />
+                    <span className="text-lg text-foreground">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))}
+
+        {p.neighborhoods && p.neighborhoods.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-3xl font-black text-primary mb-6">أحياء شمال الرياض التي نخدمها</h2>
+            <p className="text-lg leading-relaxed text-foreground mb-5">
+              الدروس الحضورية متاحة في أحياء شمال الرياض، والدروس الأونلاين متاحة لجميع مناطق المملكة.
+            </p>
+            <ul className="flex flex-wrap gap-3">
+              {p.neighborhoods.map((n) => (
+                <li key={n} className="bg-card border border-gold/40 rounded-full px-5 py-2 font-bold text-primary">
+                  {n}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {p.faqs && p.faqs.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-3xl font-black text-primary mb-6">أسئلة شائعة</h2>
+            <div className="space-y-4">
+              {p.faqs.map((f, i) => (
+                <details key={i} className="bg-card border border-border rounded-xl p-5 open:border-gold">
+                  <summary className="cursor-pointer text-lg font-bold text-primary">{f.q}</summary>
+                  <p className="mt-3 text-lg leading-relaxed text-foreground">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className="mt-14 bg-primary text-primary-foreground rounded-3xl p-8 md:p-10 shadow-elegant text-center space-y-5">
           <h2 className="text-2xl md:text-3xl font-black">احجز حصتك الآن</h2>
           <p className="text-lg opacity-90">تواصل مباشرة مع الأستاذ محمود دغمش للاستفسار والحجز</p>
