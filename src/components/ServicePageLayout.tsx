@@ -19,6 +19,9 @@ export interface ServicePageProps {
   jsonLdName: string;
   jsonLdDescription: string;
   defaultStudyType: string;
+  longSections?: { h2: string; paragraphs?: string[]; bullets?: string[] }[];
+  neighborhoods?: string[];
+  faqs?: { q: string; a: string }[];
 }
 
 const ServicePageLayout = (p: ServicePageProps) => {
