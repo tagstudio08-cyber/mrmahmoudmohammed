@@ -10,6 +10,7 @@ import Qudurat from "./pages/Qudurat.tsx";
 import Tahsili from "./pages/Tahsili.tsx";
 import ImamUniversity from "./pages/ImamUniversity.tsx";
 import FollowUp from "./pages/FollowUp.tsx";
+import QuduratQuestions from "./pages/QuduratQuestions.tsx";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/tahsili" element={<Tahsili />} />
           <Route path="/imam-university-math" element={<ImamUniversity />} />
           <Route path="/follow-up" element={<FollowUp />} />
+          <Route path="/qudurat-questions" element={<QuduratQuestions />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
