@@ -29,12 +29,12 @@ const services = [
 ];
 
 const mathSubjects = [
-  { icon: Calculator, title: "حساب التكامل" },
-  { icon: BookOpen, title: "أسس الرياضيات" },
-  { icon: TrendingUp, title: "حساب التفاضل والتكامل" },
-  { icon: BarChart3, title: "حساب المتجهات" },
-  { icon: Grid3X3, title: "الجبر الخطي" },
-  { icon: Layers, title: "التحليل العددي (1)" },
+  { icon: Calculator, title: "حساب التكامل", to: "/integral-calculus" },
+  { icon: BookOpen, title: "أسس الرياضيات", to: "/math-foundations" },
+  { icon: TrendingUp, title: "حساب التفاضل والتكامل", to: "/calculus" },
+  { icon: BarChart3, title: "حساب المتجهات", to: "/vector-calculus" },
+  { icon: Grid3X3, title: "الجبر الخطي", to: "/linear-algebra" },
+  { icon: Layers, title: "التحليل العددي (1)", to: "/numerical-analysis" },
 ];
 
 const Index = () => {
@@ -123,6 +123,15 @@ const Index = () => {
             <Link to="/imam-university-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
               صفحة جامعة الإمام ←
             </Link>
+            <Link to="/king-saud-university-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة جامعة الملك سعود ←
+            </Link>
+            <Link to="/math-all-levels" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة رياضيات جميع المراحل ←
+            </Link>
+            <Link to="/mawhiba-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة موهبة في الرياضيات ←
+            </Link>
             <Link to="/follow-up" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all sm:col-span-3">
               صفحة متابعة الدروس والواجبات ←
             </Link>
@@ -147,17 +156,25 @@ const Index = () => {
           <div className="w-24 h-1 bg-gold mx-auto mb-14 rounded-full" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {mathSubjects.map((s, i) => (
-              <div
-                key={i}
+            {mathSubjects.map((s) => (
+              <Link
+                key={s.to}
+                to={s.to}
                 className="group flex flex-col items-center text-center gap-4 bg-card p-6 rounded-2xl border border-border hover:border-gold transition-all hover:shadow-elegant hover:-translate-y-1"
               >
                 <div className="shrink-0 w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform">
                   <s.icon className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-lg md:text-xl font-bold text-primary leading-relaxed">{s.title}</p>
-              </div>
+                <span className="font-bold text-gold">صفحة المادة ←</span>
+              </Link>
             ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-10 text-center">
+            <Link to="/math-subjects" className="inline-block bg-primary text-primary-foreground border-2 border-gold rounded-2xl px-8 py-4 font-bold hover:bg-primary/90 transition-all">
+              صفحة مواد الرياضيات الجامعية ←
+            </Link>
           </div>
         </div>
       </section>
@@ -238,7 +255,19 @@ const Index = () => {
 
       <StudentResults />
 
+      <div className="container mx-auto px-4 pb-10 text-center">
+        <Link to="/results" className="inline-block bg-card border-2 border-gold/40 hover:border-gold rounded-2xl px-8 py-4 font-bold text-primary transition-all">
+          صفحة نتائج الطلاب ←
+        </Link>
+      </div>
+
       <ReviewsSection />
+
+      <div className="container mx-auto px-4 pb-16 text-center">
+        <Link to="/reviews" className="inline-block bg-card border-2 border-gold/40 hover:border-gold rounded-2xl px-8 py-4 font-bold text-primary transition-all">
+          صفحة تقييمات الطلاب ←
+        </Link>
+      </div>
       </main>
 
       <footer className="bg-primary text-primary-foreground/70 py-6 text-center text-sm">

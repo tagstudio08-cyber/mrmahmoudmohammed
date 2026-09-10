@@ -11,6 +11,11 @@ import Tahsili from "./pages/Tahsili.tsx";
 import ImamUniversity from "./pages/ImamUniversity.tsx";
 import FollowUp from "./pages/FollowUp.tsx";
 import QuduratQuestions from "./pages/QuduratQuestions.tsx";
+import MathSubjects from "./pages/MathSubjects.tsx";
+import Results from "./pages/Results.tsx";
+import Reviews from "./pages/Reviews.tsx";
+import ServicePageLayout from "@/components/ServicePageLayout";
+import { servicePages } from "@/data/servicePages";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +32,12 @@ const App = () => (
           <Route path="/imam-university-math" element={<ImamUniversity />} />
           <Route path="/follow-up" element={<FollowUp />} />
           <Route path="/qudurat-questions" element={<QuduratQuestions />} />
+          <Route path="/math-subjects" element={<MathSubjects />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="/reviews" element={<Reviews />} />
+          {servicePages.map((p) => (
+            <Route key={p.slug} path={`/${p.slug}`} element={<ServicePageLayout {...p} />} />
+          ))}
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
