@@ -255,7 +255,19 @@ const Index = () => {
 
       <StudentResults />
 
+      <div className="container mx-auto px-4 pb-10 text-center">
+        <Link to="/results" className="inline-block bg-card border-2 border-gold/40 hover:border-gold rounded-2xl px-8 py-4 font-bold text-primary transition-all">
+          صفحة نتائج الطلاب ←
+        </Link>
+      </div>
+
       <ReviewsSection />
+
+      <div className="container mx-auto px-4 pb-16 text-center">
+        <Link to="/reviews" className="inline-block bg-card border-2 border-gold/40 hover:border-gold rounded-2xl px-8 py-4 font-bold text-primary transition-all">
+          صفحة تقييمات الطلاب ←
+        </Link>
+      </div>
       </main>
 
       <footer className="bg-primary text-primary-foreground/70 py-6 text-center text-sm">
