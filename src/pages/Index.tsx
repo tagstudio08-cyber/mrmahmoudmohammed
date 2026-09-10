@@ -123,6 +123,15 @@ const Index = () => {
             <Link to="/imam-university-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
               صفحة جامعة الإمام ←
             </Link>
+            <Link to="/king-saud-university-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة جامعة الملك سعود ←
+            </Link>
+            <Link to="/math-all-levels" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة رياضيات جميع المراحل ←
+            </Link>
+            <Link to="/mawhiba-math" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all">
+              صفحة موهبة في الرياضيات ←
+            </Link>
             <Link to="/follow-up" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all sm:col-span-3">
               صفحة متابعة الدروس والواجبات ←
             </Link>
