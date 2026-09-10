@@ -10,6 +10,7 @@ import Qudurat from "./pages/Qudurat.tsx";
 import Tahsili from "./pages/Tahsili.tsx";
 import ImamUniversity from "./pages/ImamUniversity.tsx";
 import FollowUp from "./pages/FollowUp.tsx";
+import QuduratQuestions from "./pages/QuduratQuestions.tsx";
 
 const queryClient = new QueryClient();
 
