@@ -32,6 +32,12 @@ const App = () => (
           <Route path="/imam-university-math" element={<ImamUniversity />} />
           <Route path="/follow-up" element={<FollowUp />} />
           <Route path="/qudurat-questions" element={<QuduratQuestions />} />
+          <Route path="/math-subjects" element={<MathSubjects />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="/reviews" element={<Reviews />} />
+          {servicePages.map((p) => (
+            <Route key={p.slug} path={`/${p.slug}`} element={<ServicePageLayout {...p} />} />
+          ))}
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
