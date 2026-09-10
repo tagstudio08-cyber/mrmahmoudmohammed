@@ -66,6 +66,7 @@ const Qudurat = () => (
         ],
       },
     ]}
+    showResults
     neighborhoods={[
       "الملقا",
       "الياسمين",

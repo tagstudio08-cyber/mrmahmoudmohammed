@@ -135,6 +135,8 @@ const ServicePageLayout = (p: ServicePageProps) => {
           </section>
         ))}
 
+        {p.showResults && <StudentResults compact />}
+
         {p.neighborhoods && p.neighborhoods.length > 0 && (
           <section className="mt-12">
             <h2 className="text-3xl font-black text-primary mb-6">أحياء شمال الرياض التي نخدمها</h2>
