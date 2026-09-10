@@ -11,6 +11,11 @@ import Tahsili from "./pages/Tahsili.tsx";
 import ImamUniversity from "./pages/ImamUniversity.tsx";
 import FollowUp from "./pages/FollowUp.tsx";
 import QuduratQuestions from "./pages/QuduratQuestions.tsx";
+import MathSubjects from "./pages/MathSubjects.tsx";
+import Results from "./pages/Results.tsx";
+import Reviews from "./pages/Reviews.tsx";
+import ServicePageLayout from "@/components/ServicePageLayout";
+import { servicePages } from "@/data/servicePages";
 
 const queryClient = new QueryClient();
 
