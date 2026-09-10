@@ -5,6 +5,7 @@ import { TrendingUp, BookOpen, Building2, Lightbulb, Star, Phone, GraduationCap,
 import teacherImg from "@/assets/teacher.png";
 import { supabase } from "@/integrations/supabase/client";
 import ReviewsSection from "@/components/ReviewsSection";
+import StudentResults from "@/components/StudentResults";
 import ScrollVideoSection from "@/components/ScrollVideoSection";
 
 const studyTypes = [
@@ -231,6 +232,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <StudentResults />
 
       <ReviewsSection />
       </main>
