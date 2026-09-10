@@ -29,12 +29,12 @@ const services = [
 ];
 
 const mathSubjects = [
-  { icon: Calculator, title: "حساب التكامل" },
-  { icon: BookOpen, title: "أسس الرياضيات" },
-  { icon: TrendingUp, title: "حساب التفاضل والتكامل" },
-  { icon: BarChart3, title: "حساب المتجهات" },
-  { icon: Grid3X3, title: "الجبر الخطي" },
-  { icon: Layers, title: "التحليل العددي (1)" },
+  { icon: Calculator, title: "حساب التكامل", to: "/integral-calculus" },
+  { icon: BookOpen, title: "أسس الرياضيات", to: "/math-foundations" },
+  { icon: TrendingUp, title: "حساب التفاضل والتكامل", to: "/calculus" },
+  { icon: BarChart3, title: "حساب المتجهات", to: "/vector-calculus" },
+  { icon: Grid3X3, title: "الجبر الخطي", to: "/linear-algebra" },
+  { icon: Layers, title: "التحليل العددي (1)", to: "/numerical-analysis" },
 ];
 
 const Index = () => {
