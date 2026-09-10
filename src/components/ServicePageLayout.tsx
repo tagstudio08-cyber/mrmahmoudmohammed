@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle, GraduationCap, CheckCircle2, Home } from "lucide-react";
 import QuickBookingForm from "./QuickBookingForm";
+import StudentResults from "./StudentResults";
 
 export interface ServicePageProps {
   slug: string;
@@ -22,6 +23,7 @@ export interface ServicePageProps {
   longSections?: { h2: string; paragraphs?: string[]; bullets?: string[] }[];
   neighborhoods?: string[];
   faqs?: { q: string; a: string }[];
+  showResults?: boolean;
 }
 
 const ServicePageLayout = (p: ServicePageProps) => {
@@ -132,6 +134,8 @@ const ServicePageLayout = (p: ServicePageProps) => {
             )}
           </section>
         ))}
+
+        {p.showResults && <StudentResults compact />}
 
         {p.neighborhoods && p.neighborhoods.length > 0 && (
           <section className="mt-12">
