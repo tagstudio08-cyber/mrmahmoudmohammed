@@ -126,6 +126,9 @@ const Index = () => {
             <Link to="/follow-up" className="block text-center bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 rounded-2xl p-5 font-bold text-primary transition-all sm:col-span-3">
               صفحة متابعة الدروس والواجبات ←
             </Link>
+            <Link to="/qudurat-questions" className="block text-center bg-primary text-primary-foreground border-2 border-gold hover:bg-primary/90 rounded-2xl p-5 font-bold transition-all sm:col-span-3">
+              الأسئلة الأكثر تكراراً في القدرات الكمي مع الحل ←
+            </Link>
           </div>
 
           <div className="max-w-3xl mx-auto mt-16 relative bg-primary text-primary-foreground rounded-3xl p-10 shadow-elegant">
