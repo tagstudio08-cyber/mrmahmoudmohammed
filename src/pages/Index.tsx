@@ -156,17 +156,25 @@ const Index = () => {
           <div className="w-24 h-1 bg-gold mx-auto mb-14 rounded-full" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {mathSubjects.map((s, i) => (
-              <div
-                key={i}
+            {mathSubjects.map((s) => (
+              <Link
+                key={s.to}
+                to={s.to}
                 className="group flex flex-col items-center text-center gap-4 bg-card p-6 rounded-2xl border border-border hover:border-gold transition-all hover:shadow-elegant hover:-translate-y-1"
               >
                 <div className="shrink-0 w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform">
                   <s.icon className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-lg md:text-xl font-bold text-primary leading-relaxed">{s.title}</p>
-              </div>
+                <span className="font-bold text-gold">صفحة المادة ←</span>
+              </Link>
             ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-10 text-center">
+            <Link to="/math-subjects" className="inline-block bg-primary text-primary-foreground border-2 border-gold rounded-2xl px-8 py-4 font-bold hover:bg-primary/90 transition-all">
+              صفحة مواد الرياضيات الجامعية ←
+            </Link>
           </div>
         </div>
       </section>
